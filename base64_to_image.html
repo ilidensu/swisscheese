@@ -1,0 +1,22 @@
+<html>
+<body>
+	<h1 id="words">Convert Base64 code to image</h1>
+	<div>
+		<textarea id="input_base64"></textarea>
+		<h1 id="update">Click here</h1>
+	</div>
+	<image id="output_image" src=''>
+	
+
+</body>
+<script>
+	
+	document.getElementById('input_base64').addEventListener('change',updateImage);
+	function updateImage(){
+		document.getElementById('update').innerHTML = 'Displaying Base64 Image';
+		
+		document.getElementById('output_image').src = 'data:image/jpeg;base64,'+document.getElementById('input_base64').value;
+		
+	}
+</script>
+</html>
